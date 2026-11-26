@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3eb">
+    <meta name="description" content="Find your seat for our wedding celebration.">
+    <title>Find Your Seat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="lookup-page">
+      <section class="welcome-panel" aria-label="Wedding welcome">
+        <div class="welcome-copy">
+          <p class="eyebrow">A day together</p>
+          <h1>Welcome.<br>We're glad<br>you're here.</h1>
+          <span class="welcome-mark" aria-hidden="true"></span>
+        </div>
+        <p class="welcome-footer">A celebration made better by you</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="page-title">
+        <div class="form-content">
+          <p class="eyebrow form-eyebrow">Wedding reception</p>
+          <h2 id="page-title">Find your seat</h2>
+          <form id="lookup-form" novalidate>
+            <div class="field-group">
+              <label for="first-name">First name(s)</label>
+              <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="field-group">
+              <label for="last-name">Last name</label>
+              <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+            </div>
+            <button id="lookup-button" type="submit" disabled>
+              <span>Find my seat</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </form>
+          <div id="result" class="result" aria-live="polite" aria-atomic="true" hidden></div>
+          <p class="form-note">Please check in with our team if you need a hand.</p>
+        </div>
+        <span class="corner-detail" aria-hidden="true">✳</span>
+      </section>
+    </main>
+  </body>
+</html>
