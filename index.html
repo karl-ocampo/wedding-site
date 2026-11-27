@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script src="app.js?v=2" defer></script>
   </head>
   <body>
     <main class="lookup-page">
@@ -41,11 +41,20 @@
               <span class="button-arrow" aria-hidden="true">↗</span>
             </button>
           </form>
-          <div id="result" class="result" aria-live="polite" aria-atomic="true" hidden></div>
           <p class="form-note">Please check in with our team if you need a hand.</p>
         </div>
         <span class="corner-detail" aria-hidden="true">✳</span>
       </section>
     </main>
+
+    <dialog id="result-dialog" class="result-dialog" aria-labelledby="result-title">
+      <div class="dialog-content">
+        <button id="result-close" class="dialog-close" type="button" aria-label="Close">×</button>
+        <p id="result-eyebrow" class="dialog-eyebrow">Seat assignment</p>
+        <h2 id="result-title"></h2>
+        <p id="result-message" class="dialog-message"></p>
+        <button id="result-done" class="dialog-done" type="button">Done</button>
+      </div>
+    </dialog>
   </body>
 </html>
